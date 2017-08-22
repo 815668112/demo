@@ -1,0 +1,35 @@
+spring:
+  devtools:
+    restart:
+      exclude:
+        - static/**
+        - templates/**
+
+
+
+
+
+  datasource:
+    name: demo
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.99.155:3306/demo
+    initialSize: 5
+    minIdle: 5
+    maxActive: 10
+
+
+  datasources:
+    - name: my
+      url: jdbc:mysql://192.168.99.155:3306/my
+    - name: gd
+      url: jdbc:mysql://192.168.99.155:3306/gd
+
+
+
+  jpa:
+      hibernate:
+        ddl-auto: update
+
